@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--<meta charset="UTF-8"></meta>-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1"></meta>-->
+    <title>Home Page</title>
+    <!--th:href="@{classpath:static/css/bootstrap.css}"-->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link href="../static/css/styles.css" rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <page size="A4">
+
+        <div class="container">
+            <div class="row mt-2 clearfix">
+                <div class="col-md-12 mt-2">
+                    <p class="float-left font-weight-bold" th:text="${serial}"></p>
+                </div>
+                <div class="col-md-12 text-center mt-0">
+                    <!--th:src="@{classpath:static/img/gra.png}"-->
+                    <img src="../static/img/gra.png" th:width="100" th:height="100" th:src="@{/img/gra.png}"/>
+                    <h4 class="font-weight-bold"><u>GHANA REVENUE AUTHORITY</u></h4>
+                    <p class="mt-1">ISO 9001:2000 CERTIFIED</p>
+                    <h4 class="mt-2 font-weight-normal" th:inline="text">[[${revenueAuthority}]]</h4>
+                    <h3 class="mt-2 font-weight-light">ELECTRONIC FISCAL DEVICE APPROVAL CERTIFICATE</h3>
+                    <p class="text-nowrap font-weight-normal"><small>&#40;ISSUED UNDER REGULATIONS 5 AND 6 OF THE VALUE ADDED TAX &#40;ELECTRONIC FISCAL DEVICES&#41;REGULATIONS 2010&#41;</small></p>
+                </div>
+            </div>
+        </div>
+    <script src="../static/js/jquery-3.3.1.min.js" th:href="@{/js/jquery-3.3.1.min.js}"></script>
+    <script src="../static/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+    <!--<script src="../static/js/jquery-3.3.1.min.js" th:href="@{classpath:static/js/jquery-3.3.1.min.js}"></script>-->
+    <!--<script src="../static/js/bootstrap.js" th:href="@{classpath:static/js/bootstrap.js}"></script>-->
+    </page>
+</body>
+</html>
